@@ -1,0 +1,6 @@
+@_8927180_Lab2_Microservices_HostAddress = http://localhost:5021
+
+GET {{_8927180_Lab2_Microservices_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

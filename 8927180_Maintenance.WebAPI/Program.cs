@@ -1,4 +1,4 @@
-using _8927180_Maintnance.WebAPI.Services;
+using _8927180_maintenance.WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

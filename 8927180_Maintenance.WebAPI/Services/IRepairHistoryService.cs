@@ -1,4 +1,4 @@
-﻿namespace _8927180_Maintnance.WebAPI.Services
+﻿namespace _8927180_maintenance.WebAPI.Services
 {
     public interface IRepairHistoryService
     {

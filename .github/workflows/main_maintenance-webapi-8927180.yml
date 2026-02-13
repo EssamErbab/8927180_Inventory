@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - maintenance-webapi-89
 on:
   push:
     branches:
-      - master
+      - Main
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build Maintenance.WebAPI.csproj --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Maintenance.WebAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DF852DABCDE24C1F80771096751778F7 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_59D55259C5EA4DCDA20D5CADBB21A546 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E5A265F6918A42128CDFE698582CE593 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C223E579307A457D93502186CDADAC7C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_36174ABBA0DB4C5CAEEC2C12B1F9A449 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F64C49C812FB49E19CC1EA26B51AD836 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp

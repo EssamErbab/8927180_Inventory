@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build Mainenance.WebAPI.csproj --configuration Release
+        run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Mainenance.WebAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C223E579307A457D93502186CDADAC7C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_36174ABBA0DB4C5CAEEC2C12B1F9A449 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F64C49C812FB49E19CC1EA26B51AD836 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_473D350F550F4C0A87626C56AB318733 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_07700422CA624D7DB7E5131EA83805D8 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C2D938ED291147E9A0B3AF3FAF39299A }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -62,5 +62,4 @@ jobs:
           app-name: 'maintenance-webapi-8927180'
           slot-name: 'Production'
           package: .
-
           

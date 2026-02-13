@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="8927180_Lab2_Microservices/8927180_Lab2_Microservices.csproj" />
-  <Project Path="8927180_Maintnance.WebAPI/8927180_Maintnance.WebAPI.csproj" />
+  <Project Path="8927180_Maintenance.WebAPI/8927180_Maintenance.WebAPI.csproj" />
 </Solution>

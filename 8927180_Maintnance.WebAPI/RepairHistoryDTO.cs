@@ -1,4 +1,4 @@
-﻿namespace _8927180_Maintnance.WebAPI
+﻿namespace _8927180_Maintenance.WebAPI
 {
     public class RepairHistoryDTO
     {

@@ -1,4 +1,4 @@
-﻿namespace _8927180_Maintnance.WebAPI.Services
+﻿namespace _8927180_Maintenance.WebAPI.Services
 {
     public class FakeRepairHistoryService : IRepairHistoryService
     {

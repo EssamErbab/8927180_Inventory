@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build 8927180_Maintenance.WebAPI/8927180_Maintenance.WebAPI.csproj --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish 8927180_Maintenance.WebAPI/8927180_Maintenance.WebAPI.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -62,4 +62,7 @@ jobs:
           app-name: 'Maintenance-webapi-8927180'
           slot-name: 'Production'
           package: .
+
           
+
+

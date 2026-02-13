@@ -1,6 +1,6 @@
-@_8927180_maintenance.WebAPI_HostAddress = http://localhost:5110
+@_8927180_Maintenance.WebAPI_HostAddress = http://localhost:5110
 
-GET {{_8927180_maintenance.WebAPI_HostAddress}}/weatherforecast/
+GET {{_8927180_Maintenance.WebAPI_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

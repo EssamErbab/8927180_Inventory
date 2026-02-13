@@ -1,7 +1,7 @@
-﻿using _8927180_maintenance.WebAPI.Services;
+﻿using _8927180_Maintenance.WebAPI.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace _8927180_maintenance.WebAPI.Controllers
+namespace _8927180_Maintenance.WebAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

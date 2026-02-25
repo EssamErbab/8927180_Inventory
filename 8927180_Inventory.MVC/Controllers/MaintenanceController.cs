@@ -40,7 +40,7 @@ namespace _8927180_Inventory.MVC.Controllers
         public async Task<IActionResult> History(int vehicleId)
         {
             var client = _httpClientFactory.CreateClient("MaintenanceApi");
-            var repairs = await client.GetFromJsonAsync<List<RepairHistoryViewModel>>(
+            var repairs = await client.GetFromJsonAsync<IEnumerable<RepairHistoryViewModel>>(
             $"api/maintenance/vehicles/{vehicleId}/repairs");
             return View(repairs ?? new List<RepairHistoryViewModel>());
         }

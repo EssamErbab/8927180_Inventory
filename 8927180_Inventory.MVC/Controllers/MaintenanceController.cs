@@ -14,9 +14,20 @@ namespace _8927180_Inventory.MVC.Controllers
 
         public async Task<IActionResult> Usage()
         {
-            var client = _httpClientFactory.CreateClient("MaintenanceAPI");
-            var response = await client.GetAsync("api/Maintenance/usage");
-            return View(response);
+            var client = _httpClientFactory.CreateClient("MaintenanceApi");
+            var result = await client.GetFromJsonAsync<object>("api/Maintenance/usage");
+            return View(result);
+        }
+
+        public async Task<IActionResult> Transfer(int fromId, int toId, decimal amount)
+        {
+            var client = _httpClientFactory.CreateClient("MaintenanceApi");
+            var response = await client.PostAsync(
+            $"api/RepairHistory/transfer?fromId={fromId}&toId={toId}&amount={amount}",
+            null);
+            var content = await response.Content.ReadAsStringAsync();
+            ViewBag.Result = content;
+            return View();
         }
 
         [HttpGet]

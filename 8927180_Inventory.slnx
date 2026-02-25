@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="8927180_Inventory.MVC/8927180_Inventory.MVC.csproj" Id="220e1ea8-0dd2-4c1f-861c-9a7f4c70bc49" />
   <Project Path="8927180_Lab2_Microservices/8927180_Lab2_Microservices.csproj" />
   <Project Path="8927180_Maintenance.WebAPI/8927180_Maintenance.WebAPI.csproj" />
 </Solution>

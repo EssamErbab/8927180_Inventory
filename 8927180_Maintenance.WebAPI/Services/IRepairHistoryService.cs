@@ -2,6 +2,8 @@
 {
     public interface IRepairHistoryService
     {
-        List<RepairHistoryDTO> GetByVehicleId(int vehicleId);
-    }
+        IEnumerable<RepairHistoryDTO> GetAll();
+		IEnumerable<RepairHistoryDTO> GetByVehicleId(int vehicleId);
+        RepairHistoryDTO AddRepair(RepairHistoryDTO repair);
+	}
 }
